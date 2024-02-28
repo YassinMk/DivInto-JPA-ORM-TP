@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DivIntoJpaApplicationTests {
 
+
 	@Test
 	void contextLoads() {
 	}

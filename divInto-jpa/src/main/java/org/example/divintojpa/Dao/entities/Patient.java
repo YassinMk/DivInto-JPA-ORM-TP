@@ -8,14 +8,13 @@ import lombok.*;
 
 import java.util.Date;
 
+@Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor
 public class Patient {
-
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    private Date DateNaissance;
-    private boolean malade ;
+    private Date dateNaissance;
+    private boolean malade;
     private int score;
 }
