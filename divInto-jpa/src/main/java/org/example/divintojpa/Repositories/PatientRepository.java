@@ -13,7 +13,6 @@ import java.util.List;
 public interface PatientRepository extends JpaRepository<Patient, Long> {
     public List<Patient> findByMalade(boolean nom);
     Page<Patient> findByMalade(boolean nom, Pageable pageable);
-    List<Patient> findByDateNaissanceBetweenAndMaladeIsTrueOOrNomLike(Date date1, Date date2);
-    @Query("select p from Patient p where p.nom like :n a and score<:y")
-    List<Patient> chercherPatient(@Param("x") String nom,@Param("y") int y);
+    @Query("select p from Patient p where p.nom like :n and p.score > :y")
+    List<Patient> chercherPatient(@Param("n") String nom,@Param("y") int y);
 }

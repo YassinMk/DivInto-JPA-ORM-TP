@@ -65,6 +65,7 @@ public class DivIntoJpaApplication implements CommandLineRunner {
 		patient.setScore(860);
 		patientRepository.save(patient);
 		patientRepository.deleteById(1L);
+		System.out.println("//////////////////////////////");
 
 	}
 
