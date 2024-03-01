@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @Getter @Setter
-@Table(schema = "USERS")
+@Table(name = "USERS")
 public class User {
     @Id
     private String userId;

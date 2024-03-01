@@ -14,5 +14,6 @@ public class Role {
     @Column(unique = true,length = 20)
     private String roleName;
     @ManyToMany(fetch = FetchType.EAGER)
+    @ToString.Exclude //probleme infinity loop
     private List<User> users = new ArrayList<>();
 }

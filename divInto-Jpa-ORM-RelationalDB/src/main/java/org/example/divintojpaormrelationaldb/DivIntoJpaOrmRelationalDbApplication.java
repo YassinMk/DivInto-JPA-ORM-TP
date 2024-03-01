@@ -40,6 +40,18 @@ public class DivIntoJpaOrmRelationalDbApplication  {
             userService.addRoleToUser("user1","ADMIN");
             userService.addRoleToUser("user2","TEACHER");
 
+            try {
+                User userAth =userService.athentificate("user1","1234");
+                System.out.println("user1 is authenticated");
+                System.out.println("user name is : " + userAth.getUserName());
+                System.out.println("user1 roles : ");
+               userAth.getRoles().forEach(r -> {
+                   System.out.println("Role=>" +r);
+               });
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
 
         };
     }

@@ -51,4 +51,14 @@ public class UserServiceImpl implements UserService{
             }
 
     }
+
+    @Override
+    public User athentificate(String userName, String password) {
+        User user = userRepository.findByUserName(userName);
+        if(user == null) throw new RuntimeException("Username or mot de passe incorrecte");
+        if(user != null && user.getPassword().equals(password)) {
+            return user;
+        }
+        throw new RuntimeException("Username or mot de passe incorrecte");
+    }
 }
