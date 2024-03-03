@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>divInto-Jpa-ORM-MappingAssociation</artifactId>
+    <artifactId>divInto-Jpa-ORM-RelationalDB</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>divInto-Jpa-ORM-RelationalDB</name>
     <description>divInto-Jpa-ORM-RelationalDB</description>
