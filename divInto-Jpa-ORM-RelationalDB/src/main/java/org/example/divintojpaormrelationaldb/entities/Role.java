@@ -1,5 +1,6 @@
 package org.example.divintojpaormrelationaldb.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,5 +16,6 @@ public class Role {
     private String roleName;
     @ManyToMany(fetch = FetchType.EAGER)
     @ToString.Exclude //probleme infinity loop
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<User> users = new ArrayList<>();
 }
