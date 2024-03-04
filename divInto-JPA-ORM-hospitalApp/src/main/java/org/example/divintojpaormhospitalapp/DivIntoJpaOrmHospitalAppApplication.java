@@ -22,7 +22,7 @@ public class DivIntoJpaOrmHospitalAppApplication {
         SpringApplication.run(DivIntoJpaOrmHospitalAppApplication.class, args);
     }
     @Bean //notation to make the method a bean in the spring container
-    CommandLineRunner start(IHospitalService hospitalService){
+    CommandLineRunner start(IHospitalService hospitalService , RendezVousRepository rendezVousRepository){
         return args -> {
             Stream.of("Amine", "Mohamed", "Yassine", "Oussama").forEach(nom -> {
                 Patient patient = new Patient();
@@ -39,10 +39,9 @@ public class DivIntoJpaOrmHospitalAppApplication {
                 hospitalService.saveMedecin(medecin);
 
             });
-            System.out.println("******************");
-            Patient patient = patientRepository.findById(1L).orElse(null);
-            Patient patient1 = patientRepository.findByNom("Amine");
-            Medecin medecin = medecinRepository.findByNom("aymane");
+            Patient patient = hospitalService.findPatientById(1L);
+            Patient patient1 = hospitalService.findPatientByNom("Amine");
+            Medecin medecin = hospitalService.findMedecinById(1L);;
 
             RendezVous rendezVous = new RendezVous();
             rendezVous.setDate(new Date());
@@ -52,7 +51,7 @@ public class DivIntoJpaOrmHospitalAppApplication {
             rendezVous.setStatus(StatusRDV.PENDING);
             hospitalService.saveRendezVous(rendezVous);
             System.out.println("******************");
-            RendezVous rendezVous1 = rendezVousRepository.findById(1L).orElse(null);
+            RendezVous rendezVous1 = rendezVousRepository.findAll().get(0);
             Consultation consultation = new Consultation();
             consultation.setDateConsultation(new Date());
             consultation.setRendezVous(rendezVous1);
