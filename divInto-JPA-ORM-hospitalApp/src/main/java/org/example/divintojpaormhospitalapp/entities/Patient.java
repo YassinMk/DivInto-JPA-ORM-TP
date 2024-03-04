@@ -1,5 +1,6 @@
 package org.example.divintojpaormhospitalapp.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,6 +14,7 @@ public class Patient {
     private String nom;
     private Date dateNaissance;
     private boolean malade;
-    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY) // mappedBy is the name of the field in the RendezVous class
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)// mappedBy is the name of the field in the RendezVous class
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<RendezVous> rendezVous;
 }
