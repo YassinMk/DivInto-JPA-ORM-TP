@@ -13,6 +13,6 @@ public class Patient {
     private String nom;
     private Date dateNaissance;
     private boolean malade;
-    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY) // mappedBy is the name of the field in the RendezVous class
     private Collection<RendezVous> rendezVous;
 }

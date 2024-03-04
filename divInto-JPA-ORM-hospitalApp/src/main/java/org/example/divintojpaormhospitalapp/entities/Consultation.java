@@ -16,7 +16,7 @@ public class Consultation {
     private Long id;
     private Date dateConsultation;
     private String rapport;
-    @OneToOne
+    @OneToOne // mappedBy is the name of the field in the RendezVous class
     private RendezVous rendezVous;
 
 }

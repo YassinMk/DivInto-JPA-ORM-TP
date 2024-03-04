@@ -19,6 +19,6 @@ public class RendezVous {
     private Patient patient;
     @ManyToOne
     private Medecin medecin;
-    @OneToOne(mappedBy = "rendezVous")
+    @OneToOne(mappedBy = "rendezVous") // mappedBy is the name of the field in the Consultation class
     private  Consultation consultation;
 }

@@ -18,7 +18,7 @@ public class Medecin {
     private StatusRDV status;
     private String email;
     private String specialite;
-    @OneToMany(mappedBy = "medecin", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "medecin", fetch = FetchType.LAZY) // mappedBy is the name of the field in the RendezVous class
     private Collection<RendezVous> rendezVous;
 
 }
