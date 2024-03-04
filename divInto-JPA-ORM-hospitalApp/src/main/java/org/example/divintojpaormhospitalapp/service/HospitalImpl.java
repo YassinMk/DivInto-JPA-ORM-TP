@@ -8,9 +8,10 @@ import org.example.divintojpaormhospitalapp.repositories.ConsultationRepository;
 import org.example.divintojpaormhospitalapp.repositories.MedecinRepository;
 import org.example.divintojpaormhospitalapp.repositories.PatientRepository;
 import org.example.divintojpaormhospitalapp.repositories.RendezVousRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
-
+@Service
 public class HospitalImpl implements IHospitalService{
     private PatientRepository patientRepository;
     private MedecinRepository medecinRepository;
