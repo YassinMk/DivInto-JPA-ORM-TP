@@ -13,8 +13,10 @@ import java.util.Date;
 public class RendezVous {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Temporal(TemporalType.DATE) // to store only the date without the time
     private Date date;
     private boolean annule;
+    @Enumerated(EnumType.STRING) // to store the enum as a string
     private StatusRDV status;
     @ManyToOne
     private Patient patient;
