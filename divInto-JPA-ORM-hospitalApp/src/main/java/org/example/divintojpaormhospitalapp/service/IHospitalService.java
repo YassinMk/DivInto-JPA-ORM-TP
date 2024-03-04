@@ -12,4 +12,11 @@ public interface IHospitalService {
     Medecin saveMedecin(Medecin medecin);
     RendezVous saveRendezVous(RendezVous rendezVous);
     Consultation saveConsultation(Consultation consultation);
+    RendezVous findRendezVousById(String id);
+    Patient findPatientById(Long id);
+    Patient findPatientByNom(String nom);
+    Medecin findMedecinById(Long id);
+    Medecin findMedecinByNom(String nom);
+
+
 }

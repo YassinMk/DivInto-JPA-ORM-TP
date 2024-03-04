@@ -11,8 +11,8 @@ import java.util.Date;
 @Getter
 @Setter
 public class RendezVous {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id
+    private String id;
     @Temporal(TemporalType.DATE) // to store only the date without the time
     private Date date;
     private boolean annule;

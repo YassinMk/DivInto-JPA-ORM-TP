@@ -9,6 +9,8 @@ import org.example.divintojpaormhospitalapp.repositories.MedecinRepository;
 import org.example.divintojpaormhospitalapp.repositories.PatientRepository;
 import org.example.divintojpaormhospitalapp.repositories.RendezVousRepository;
 
+import java.util.UUID;
+
 public class HospitalImpl implements IHospitalService{
     private PatientRepository patientRepository;
     private MedecinRepository medecinRepository;
@@ -33,11 +35,37 @@ public class HospitalImpl implements IHospitalService{
 
     @Override
     public RendezVous saveRendezVous(RendezVous rendezVous) {
+        rendezVous.setId(UUID.randomUUID().toString());
         return rendezVousRepository.save(rendezVous);
     }
 
     @Override
     public Consultation saveConsultation(Consultation consultation) {
         return consultationRepository.save(consultation);
+    }
+
+    @Override
+    public RendezVous findRendezVousById(String id) {
+        return rendezVousRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Patient findPatientById(Long id) {
+        return patientRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Patient findPatientByNom(String nom) {
+        return patientRepository.findByNom(nom);
+    }
+
+    @Override
+    public Medecin findMedecinById(Long id) {
+        return medecinRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Medecin findMedecinByNom(String nom) {
+        return medecinRepository.findByNom(nom);
     }
 }
