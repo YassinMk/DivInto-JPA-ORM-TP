@@ -15,6 +15,7 @@ public class RendezVous {
     private Long id;
     private Date date;
     private boolean annule;
+    private StatusRDV status;
     @ManyToOne
     private Patient patient;
     @ManyToOne
