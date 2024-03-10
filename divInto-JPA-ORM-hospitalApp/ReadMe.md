@@ -30,7 +30,9 @@ Ce projet traite plusieurs fonctionnalités clés pour gérer un système hospit
 - **Migration de la base de données** : Le projet comprend également une migration de la base de données de H2 à SQL pour une meilleure persistance et performance.
 
 Ces fonctionnalités sont implémentées en utilisant une architecture à plusieurs couches comprenant des entités, des dépôts, des services et des contrôleurs. Chaque couche a une responsabilité spécifique, ce qui rend le code plus organisé, plus facile à comprendre et à maintenir.
-![img_1.png](img_1.png)
+<p align="center">
+  <img src="img_1.png" alt="Image description">
+</p>
 
 
 ### Installation
