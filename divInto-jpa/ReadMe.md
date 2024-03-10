@@ -38,3 +38,4 @@ Le projet démontre les fonctionnalités suivantes de JPA :
 - Création de requête personnalisée : La méthode `chercherPatient` dans l'interface `PatientRepository` démontre comment créer des requêtes personnalisées en utilisant l'annotation `@Query`.
 
 ## Auteurs
+YassinMk
