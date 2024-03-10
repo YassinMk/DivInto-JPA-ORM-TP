@@ -13,8 +13,9 @@ L'application est structurée en plusieurs composants clés :
 - **Contrôleurs** : Ce sont des classes qui gèrent les requêtes et les réponses HTTP. Ils fournissent des points d'extrémité pour interagir avec le système hospitalier. Le contrôleur principal de cette application est `PatientRestController`, qui fournit un point d'extrémité pour récupérer tous les patients.
 
 - **Application principale** : La classe `DivIntoJpaOrmHospitalAppApplication` est le point d'entrée de l'application. Elle contient une méthode `main` qui démarre l'application. Elle contient également un bean `CommandLineRunner` qui peuple la base de données avec des données initiales lorsque l'application démarre.
-
-![img.png](img.png)
+<p align="center">
+  <img src="img.png" alt="Image description">
+</p>
 ## Fonctionnalités traitées
 
 Ce projet traite plusieurs fonctionnalités clés pour gérer un système hospitalier :
